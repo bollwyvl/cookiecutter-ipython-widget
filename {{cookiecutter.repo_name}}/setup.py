@@ -39,7 +39,7 @@ setup(
     install_requires=requirements,
     license="BSD",
     zip_safe=False,
-    keywords='{{ cookiecutter.repo_name }}',
+    keywords='{{ cookiecutter.repo_name }} ipython',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

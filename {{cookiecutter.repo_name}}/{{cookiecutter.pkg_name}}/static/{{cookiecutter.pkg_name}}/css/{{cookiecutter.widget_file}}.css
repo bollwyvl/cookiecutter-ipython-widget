@@ -1,0 +1,4 @@
+/* namespaced CSS directives */
+.{{cookiecutter.widget_stem}}View input{
+  border: solid 1px #000;
+}

@@ -2,15 +2,17 @@
 # -*- coding: utf-8 -*-
 
 """
-test_{{ cookiecutter.repo_name }}
+test_{{ cookiecutter.pkg_name }}
 ----------------------------------
 
-Tests for `{{ cookiecutter.repo_name }}` module.
+Tests for `{{ cookiecutter.pkg_name }}` module.
 """
-
+import sys
 import unittest
 
-from {{ cookiecutter.repo_name }} import {{ cookiecutter.repo_name }}
+sys.path.append("..")
+
+from {{ cookiecutter.pkg_name }} import widgets
 
 
 class Test{{ cookiecutter.repo_name|capitalize }}(unittest.TestCase):
