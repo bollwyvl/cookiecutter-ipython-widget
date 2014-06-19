@@ -19,7 +19,7 @@
         // i.e. `display(widget)`
         render: function(){
           // Do one-off things here: the jQuery chained methods are great
-          this.$date = $('<input />')
+          this.$date = this.$('<input />')
             .attr('type', 'date')
             .appendTo(this.$el);
 
