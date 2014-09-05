@@ -1,5 +1,7 @@
 # cookiecutter-ipython-widget
-Cookiecutter template for an IPython widget.
+Cookiecutter template for an IPython 2.x (stable) widget.
+
+> For IPython (master) 3.x, see the [v3.0 branch](https://github.com/bollwyvl/cookiecutter-ipython-widget/tree/v3.0)!
 
 See the [repo](https://github.com/bollwyvl/cookiecutter-ipython-widget) and the official [IPython Notebook](http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Interactive%20Widgets/Custom%20Widgets.ipynb) this is based on.
 
