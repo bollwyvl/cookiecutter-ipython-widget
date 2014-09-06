@@ -13,8 +13,7 @@ before_install:
     - time sudo apt-get install pandoc casperjs libzmq3-dev
     # pin tornado < 4 for js tests while phantom is on super old webkit
     - pip install 'tornado<4'
-    - time pip install -r requirements.txt
 install:
-    - time python setup.py install -q 
+    - time pip install -r requirements.txt
 script:
     - cd /tmp; cookiecutter ~/ --no-input; cd IPythonCustomWidget; python tests/test_widgets.py
