@@ -6,6 +6,8 @@ python:
   - 3.3
 before_install:
   - npm install -g casperjs
+  - phantomjs --version
+  - casperjs --version
 install:
   - time pip install -r requirements.txt
 script:
