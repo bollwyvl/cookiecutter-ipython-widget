@@ -1,14 +1,15 @@
 # http://travis-ci.org/#!/bollwyvl/cookiecutter-ipython-widget
 language: python
 python:
-  - 3.4
   - 2.7
   - 3.3
+  - 3.4
 before_install:
   - npm install -g casperjs
   - phantomjs --version
   - casperjs --version
 install:
+  - time pip install 'tornado<4'
   - time pip install -r requirements.txt
 script:
   - cookiecutter . --no-input
