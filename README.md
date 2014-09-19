@@ -68,7 +68,7 @@ The IPython widget API is new, and will be changing, and tooling will develop.
 Let's find some great patterns!
 
 [repo]: https://github.com/bollwyvl/cookiecutter-ipython-widget
-[nb]: http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Interactive%20Widgets/Custom%20Widgets.ipynb
+[nb]: http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Interactive%20Widgets/Custom%20Widget%20-%20Hello%20World.ipynb
 [Travis-CI]: http://travis-ci.org/
 [Tox]: http://testrun.org/tox/
 [Sphinx]: http://sphinx-doc.org/
