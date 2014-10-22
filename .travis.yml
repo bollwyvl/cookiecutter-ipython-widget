@@ -16,4 +16,4 @@ script:
   - cookiecutter . --no-input
   - cd IPythonCustomWidget
   - python setup.py develop
-  - python tests/test_widgets.py
+  - python setup.py nosetests
