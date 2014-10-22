@@ -10,3 +10,4 @@ jsonschema
 jsonpointer
 mistune
 cookiecutter
+nose

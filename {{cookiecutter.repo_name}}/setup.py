@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os
-import sys
-
-
 try:
     from setuptools import setup, find_packages
 except ImportError:
@@ -49,6 +45,5 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Framework :: IPython',
     ],
-    test_suite='tests',
     tests_require=test_requirements
 )

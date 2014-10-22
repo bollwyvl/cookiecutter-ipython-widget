@@ -27,8 +27,8 @@ cookiecutter https://github.com/bollwyvl/cookiecutter-ipython-widget.git \
  -c v3.0
 ```
 > Note: the `-c v3.0` is to ensure that you are getting the version that works 
-> with the current master of IPython. Otherwise, you'll get master, which works
-> with current stable (2.2)
+> with the current `master` of IPython. Otherwise, you'll get master, which works
+> with current stable (2.x)
 
 ## Next Steps
 - Go into the generated directory

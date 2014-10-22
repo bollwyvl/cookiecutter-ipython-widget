@@ -10,12 +10,11 @@
   * @license {{cookiecutter.license}}
   */
 define([
-  'widgets/js/manager',
   'widgets/js/widget',
   'jquery',
   'underscore'
 ],
-function(manager, widget, $, _){
+function(widget, $, _){
   var {{cookiecutter.widget_stem}}View = widget.DOMWidgetView.extend({
     // namespace your CSS so that you don't break other people's stuff
     className: '{{cookiecutter.pkg_name}} {{cookiecutter.widget_stem}}View',
@@ -49,7 +48,7 @@ function(manager, widget, $, _){
     // Tell Backbone to listen to the change event of input controls (which
     // the HTML date picker is)
     events: {
-      'change input': 'dateChange'
+      'input input': 'dateChange'
     },
 
     // Callback for when the date is changed.
@@ -62,14 +61,8 @@ function(manager, widget, $, _){
     }
 
   }); // /extend
-
-  // Register the {{cookiecutter.widget_stem}}View with the widget manager.
-  manager.WidgetManager.register_widget_view(
-    '{{cookiecutter.widget_stem}}View',
-    {{cookiecutter.widget_stem}}View
-  );
   
-  // Eventually, requirejs will be used directly: be ready.
+  // The requirejs namespace.
   return {
     '{{cookiecutter.widget_stem}}View': {{cookiecutter.widget_stem}}View
   };
