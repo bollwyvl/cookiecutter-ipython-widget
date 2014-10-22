@@ -41,5 +41,5 @@ casper.notebook_test ->
   @wait_for_idle()
 
   @then ->
-    @test.assertEquals @get_output_cell(cells.val)["text/plain"], "u'1999-09-09'",
+    @test.assertMatch @get_output_cell(cells.val)["text/plain"], /1999-09-09/,
       "...changes backend value"
