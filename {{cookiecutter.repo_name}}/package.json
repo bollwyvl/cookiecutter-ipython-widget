@@ -1,0 +1,19 @@
+{
+  "name": "{{ cookiecutter.pkg_name }}",
+  "repository": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}",
+  "version": "{{ cookiecutter.version }}",
+  "description": "{{ cookiecutter.project_short_description }}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jshint": "./node_modules/jshint/bin/jshint {{cookiecutter.pkg_name}}/static/{{cookiecutter.pkg_name}}/js/*.js",
+    "less": "./node_modules/less/bin/lessc {{cookiecutter.pkg_name}}/static/less/widget_{{cookiecutter.widget_file}}.less {{cookiecutter.pkg_name}}/static/{{cookiecutter.pkg_name}}/css/widget_{{cookiecutter.widget_file}}.css"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "casperjs": "*",
+    "less": "*",
+    "jshint": "*"
+  }
+}

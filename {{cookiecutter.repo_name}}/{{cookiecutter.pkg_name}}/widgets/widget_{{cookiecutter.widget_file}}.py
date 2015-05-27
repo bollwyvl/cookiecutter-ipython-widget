@@ -4,10 +4,8 @@
 from IPython.html import widgets
 from IPython.utils import traitlets
 
-from .mixins import InstallerMixin
 
-
-class {{cookiecutter.widget_stem}}(InstallerMixin, widgets.DOMWidget):
+class {{cookiecutter.widget_stem}}(widgets.DOMWidget):
     '''
     A sample widget... with one "real" traitlet, and a bunch of housekeeping
     '''
@@ -17,10 +15,16 @@ class {{cookiecutter.widget_stem}}(InstallerMixin, widgets.DOMWidget):
         sync=True)
 
     # the name of the Backbone.View subclass to be used
-    _view_name = traitlets.Unicode('{{cookiecutter.widget_stem}}View', sync=True)
+    _view_name = traitlets.Unicode(
+        '{{cookiecutter.widget_stem}}View',
+        sync=True
+    )
+
+    # the name of the CSS file to load with this widget
+    _view_style = traitlets.Unicode(
+        'nbextensions/{{cookiecutter.pkg_name}}/css/widget_{{cookiecutter.widget_file}}',
+        sync=True
+    )
 
     # an actual value, used in the front-end
     value = traitlets.Unicode(sync=True)
-
-    # don't define to automagically find these
-    # _view_styles = ['css/{{cookiecutter.widget_stem}}View.css']

@@ -1,0 +1,19 @@
+{
+  "name": "{{ cookiecutter.pkg_name }}",
+  "version": "{{ cookiecutter.version }}",
+  "description": "{{ cookiecutter.project_short_description }}",
+  "repository": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}",
+  "authors": [
+    "{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"
+  ],
+  "license": "{{ cookiecutter.license }}",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

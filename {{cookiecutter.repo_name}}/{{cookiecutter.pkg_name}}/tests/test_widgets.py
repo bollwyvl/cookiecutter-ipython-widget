@@ -32,7 +32,10 @@ class JSController(iptestcontroller.JSController):
             '--engine=%s' % self.engine
         ]
 
-        self.cmd = ['casperjs', 'test'] + extras + tests
+        self.cmd = [
+            os.path.abspath('./node_modules/casperjs/bin/casperjs'),
+            'test'
+        ] + extras + tests
 
 
 def test_notebook():
@@ -43,7 +46,12 @@ def test_notebook():
         controller.launch(buffer_output=False)
         exitcode = controller.wait()
     except Exception as err:
+        import traceback
+
+        print("Error with", controller.cmd)
         print(err)
+        traceback.print_exc()
+
         exitcode = 1
     finally:
         controller.cleanup()

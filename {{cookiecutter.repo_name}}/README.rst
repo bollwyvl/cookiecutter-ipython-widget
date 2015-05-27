@@ -1,23 +1,10 @@
-===============================
-{{ cookiecutter.project_name }}
-===============================
 
-.. image:: https://badge.fury.io/py/{{ cookiecutter.repo_name }}.png
-    :target: http://badge.fury.io/py/{{ cookiecutter.repo_name }}
-    
-.. image:: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.png?branch=master
-        :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+{{cookiecutter.project_name }}
+==============================
 
-.. image:: https://pypip.in/d/{{ cookiecutter.repo_name }}/badge.png
-        :target: https://pypi.python.org/pypi/{{ cookiecutter.repo_name }}
+{{ cookiecutter.project_short_description }}
 
+    Put some lovely copy here.
 
-{{ cookiecutter.project_short_description}}
-
-* Free software: {{ cookiecutter.license }} license
-* Documentation: http://{{ cookiecutter.repo_name }}.readthedocs.org.
-
-Features
---------
-
-* TODO
+    You also could have generated this file by editing notebooks/README.ipynb
+    and generating this .rst with notebooks/Automation.ipynb

@@ -44,3 +44,7 @@ docs/_build
 # Cookiecutter
 output/
 boilerplate/
+
+node_modules
+.ipynb_checkpoints/
+npm-debug.log

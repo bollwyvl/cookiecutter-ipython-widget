@@ -1,5 +1,5 @@
 // the immediately-called closure and 'use strict' helps ensure hygiene
-;(function(define){
+;(function(define) {
 'use strict';
  /**
   * The browser-side counterpart to {{cookiecutter.widget_stem}}
@@ -10,18 +10,29 @@
   * @license {{cookiecutter.license}}
   */
 define([
-  'widgets/js/widget',
+  // libraries
   'jquery',
-  'underscore'
+  'underscore',
+
+  // ipython API
+  'widgets/js/widget',
+
+  // local imports
+  './utils'
 ],
-function(widget, $, _){
+function($, _, widget, utils) {
   var {{cookiecutter.widget_stem}}View = widget.DOMWidgetView.extend({
     // namespace your CSS so that you don't break other people's stuff
     className: '{{cookiecutter.pkg_name}} {{cookiecutter.widget_stem}}View',
 
+    loadCss: utils.loadCss,
+
     // Initialize DOM, etc. called once per view creation,
     // i.e. `display(widget)`
-    render: function(){
+    render: function() {
+      // add a stylesheet, if defined in `_view_style`
+      this.loadCss();
+
       // Do one-off things here
       this.$date = $('<input />')
         .attr('type', 'date')
@@ -35,7 +46,7 @@ function(widget, $, _){
 
     // Do things that are updated every time `this.model` is changed...
     // from the front-end or backend.
-    update: function(options){
+    update: function(options) {
       // Set the value of the date control and then call base.
       // ISO 8601 format YYYY-MM-DDTHH:mm:ss.sssZ is required
       this.$date.val(this.model.get('value'));
@@ -52,7 +63,7 @@ function(widget, $, _){
     },
 
     // Callback for when the date is changed.
-    dateChange: function(event){
+    dateChange: function(event) {
       this.model.set('value', event.currentTarget.value);
       // this ensures that the value propagates back to the backend
       this.touch();
@@ -61,10 +72,10 @@ function(widget, $, _){
     }
 
   }); // /extend
-  
+
   // The requirejs namespace.
   return {
-    '{{cookiecutter.widget_stem}}View': {{cookiecutter.widget_stem}}View
+    {{cookiecutter.widget_stem}}View: {{cookiecutter.widget_stem}}View
   };
 });
 }).call(this, define);

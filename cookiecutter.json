@@ -1,7 +1,7 @@
 {
-  "project_name": "IPython Custom Widget",
-  "repo_name": "IPythonCustomWidget",
-  "pkg_name": "ipythoncustomwidget",
+  "project_name": "Date Picker",
+  "repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+  "pkg_name": "{{ cookiecutter.repo_name|replace('-', '') }}",
   "version": "0.1.0",
 
   "full_name": "Audrey Roy",
@@ -9,11 +9,11 @@
 
   "github_username": "audreyr",
 
-  "project_short_description": "an IPython Custom Widget package.",
-  "release_date": "2014-06-17",
-  "year": "2014",
+  "project_short_description": "an IPython DatePicker Widget package.",
+  "release_date": "2015-05-26",
+  "year": "2015",
   "license": "BSD",
-  
-  "widget_file": "custom",
-  "widget_stem": "Custom"
+
+  "widget_file": "datepicker",
+  "widget_stem": "DatePicker"
 }

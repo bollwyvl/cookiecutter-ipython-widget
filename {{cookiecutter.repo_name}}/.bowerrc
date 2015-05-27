@@ -1,0 +1,1 @@
+{"directory": "{{ cookiecutter.pkg_name }}/static/{{ cookiecutter.pkg_name }}/lib"}
