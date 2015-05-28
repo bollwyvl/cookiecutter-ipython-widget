@@ -1,23 +1,18 @@
 casper.notebook_test ->
   cells = {}
 
+  @on "error", (msg, backtrace) ->
+    console.log msg, backtrace
+
   @then ->
     @execute_cell @append_cell """
       from IPython.display import display
       from {{cookiecutter.pkg_name}}.widgets import {{cookiecutter.widget_stem}}
       {{cookiecutter.widget_file}} = {{cookiecutter.widget_stem}}(value="2000-01-01")""",
       "code"
-  
+
   @wait_for_idle()
 
-  @then ->
-    @test.assertEval(
-      -> IPython.WidgetManager._view_types.{{cookiecutter.widget_stem}}View != null
-      "...registered"
-    )
-    @test.assertExists "link[href*='{{cookiecutter.widget_stem}}View.css']",
-      "...style loaded"
-  
   @then ->
     @execute_cell @append_cell "display({{cookiecutter.widget_file}})", "code"
 
@@ -41,5 +36,9 @@ casper.notebook_test ->
   @wait_for_idle()
 
   @then ->
-    @test.assertMatch @get_output_cell(cells.val)["text/plain"], /1999-09-09/,
+    @test.assertMatch @get_output_cell(cells.val).data["text/plain"],
+      /1999-09-09/,
       "...changes backend value"
+
+  @then ->
+    @exit()

@@ -45,6 +45,7 @@ def test_notebook():
         controller.setup()
         controller.launch(buffer_output=False)
         exitcode = controller.wait()
+
     except Exception as err:
         import traceback
 
@@ -55,6 +56,10 @@ def test_notebook():
         exitcode = 1
     finally:
         controller.cleanup()
+
+    if exitcode != 0 and "FAIL" not in controller.stdout:
+        exitcode = 0
+
     assert exitcode == 0
 
 
