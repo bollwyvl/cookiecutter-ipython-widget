@@ -9,4 +9,5 @@ script:
   - cd date-picker
   - pip install -r requirements-dev.txt
   - npm install
+  - python setup.py install
   - python setup.py test

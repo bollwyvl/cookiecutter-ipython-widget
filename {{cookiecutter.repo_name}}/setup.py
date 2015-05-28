@@ -13,7 +13,8 @@ except:
 
 # load version without side-effects
 __version__ = None
-exec open('{{ cookiecutter.pkg_name }}/version.py')
+with open('{{ cookiecutter.pkg_name }}/version.py') as f:
+    exec(f.read())
 
 
 setup(
