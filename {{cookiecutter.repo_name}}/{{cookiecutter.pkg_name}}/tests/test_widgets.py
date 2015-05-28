@@ -46,6 +46,8 @@ def test_notebook():
         controller.setup()
         controller.launch(buffer_output=True)
         exitcode = controller.wait()
+        if exitcode != 0:
+            raise Exception(controller.stdout)
     except Exception as err:
         traceback.print_exc()
     finally:
