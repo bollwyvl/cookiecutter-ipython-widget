@@ -1,2 +1,2 @@
 wheel
-IPython>=3.0.0 [notebook]
+IPython>=3.0.0[notebook]
