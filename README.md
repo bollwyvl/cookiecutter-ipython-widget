@@ -69,6 +69,12 @@ The IPython widget API is new, and will be changing, and tooling will develop.
 Let's find some great patterns!
 
 [checklist]: https://gist.github.com/audreyr/5990987
+[Cookiecutter]: https://github.com/audreyr/cookiecutter
+[CasperJS]: http://casperjs.org/
+[jupyter-pip]: https://github.com/jdfreder/jupyter-pip
+[bower]: http://bower.io
+[less]: http://lesscss.org
+[PyPi]: https://pypi.python.org/pypi
 [nb]: http://nbviewer.ipython.org/github/ipython/ipython/blob/master/examples/Interactive%20Widgets/Custom%20Widget%20-%20Hello%20World.ipynb
 [Nose]: https://nose.readthedocs.org/en/latest/
 [ReadTheDocs]: https://readthedocs.org/
