@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from setuptools import setup
+from setuptools import (
+    setup,
+    find_packages,
+)
 
 try:
     from jupyterpip import cmdclass
@@ -25,7 +28,7 @@ setup(
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    packages=['{{ cookiecutter.pkg_name }}'],
+    packages=find_packages(include=['{{ cookiecutter.pkg_name }}']),
     include_package_data=True,
     license='{{ cookiecutter.license }}',
     zip_safe=False,

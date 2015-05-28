@@ -41,24 +41,15 @@ class JSController(iptestcontroller.JSController):
 def test_notebook():
     controller = JSController('{{cookiecutter.pkg_name}}')
     exitcode = 1
+
     try:
         controller.setup()
-        controller.launch(buffer_output=False)
+        controller.launch(buffer_output=True)
         exitcode = controller.wait()
-
     except Exception as err:
-        import traceback
-
-        print("Error with", controller.cmd)
-        print(err)
         traceback.print_exc()
-
-        exitcode = 1
     finally:
         controller.cleanup()
-
-    if exitcode != 0 and "FAIL" not in controller.stdout:
-        exitcode = 0
 
     assert exitcode == 0
 
