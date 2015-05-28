@@ -3,14 +3,10 @@ python:
   - 2.7
   - 3.4
 before_install:
-  - npm install -g casperjs
-  - phantomjs --version
-  - casperjs --version
-  - time sudo apt-get install libzmq3-dev
-install:
-  - pip install -r requirements-dev.txt
+  - sudo apt-get install libzmq3-dev
 script:
   - cookiecutter . --no-input
-  - cd DatePicker
+  - cd date-picker
+  - pip install -r requirements-dev.txt
   - npm install
   - python setup.py test
