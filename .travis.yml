@@ -1,8 +1,6 @@
-# http://travis-ci.org/#!/bollwyvl/cookiecutter-ipython-widget
 language: python
 python:
   - 2.7
-  - 3.3
   - 3.4
 before_install:
   - npm install -g casperjs
@@ -10,10 +8,9 @@ before_install:
   - casperjs --version
   - time sudo apt-get install libzmq3-dev
 install:
-  - time pip install 'tornado<4'
-  - time pip install -r requirements.txt
+  - pip install -r requirements-dev.txt
 script:
   - cookiecutter . --no-input
-  - cd IPythonCustomWidget
-  - python setup.py develop
-  - python setup.py nosetests
+  - cd DatePicker
+  - npm install
+  - python setup.py test
