@@ -1,6 +1,6 @@
 # DEPRECATED
 
-Use the new, spiffy, official [https://github.com/jupyter/widget-cookiecutter](widget-cookiecutter) instead!
+Use the new, spiffy, official [widget-cookiecutter](https://github.com/jupyter/widget-cookiecutter) instead!
 
 # cookiecutter-ipython-widget
 Cookiecutter template for an IPython 2.x (stable) widget.
